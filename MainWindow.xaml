@@ -1,0 +1,21 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="ContextMenuMWE.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ContextMenuMWE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel x:Name="myPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel.Resources>
+            <MenuFlyout x:Key="myFlyout">
+                <MenuFlyoutItem Tag="insert" Text="Insert" Icon="Download" Click="myFlyout_Click"/>
+                <MenuFlyoutItem Tag="delete" Text="Delete" Icon="Delete" Click="myFlyout_Click"/>
+            </MenuFlyout>
+        </StackPanel.Resources>
+    </StackPanel>
+</Window>
